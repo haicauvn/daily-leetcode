@@ -1,4 +1,4 @@
-package haicauvn.dailyleetcode.june2021;
+package haicauvn.dailyleetcode.c2106;
 
 /**
  * June LeetCoding Challenge 2021
