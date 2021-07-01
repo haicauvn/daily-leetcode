@@ -1,6 +1,8 @@
 package haicauvn.dailyleetcode.problems;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * https://leetcode.com/problems/two-sum/
@@ -45,42 +47,54 @@ public class TwoSum {
         }
     }
 
+//    public int[] twoSum(int[] nums, int target) {
+//        int[] result = new int[2];
+//        int[] temp = Arrays.copyOfRange(nums, 0, nums.length);
+//        Arrays.sort(nums);
+//
+//        for (int i = 0; i < nums.length - 1; i++) {
+//            int[] subnums = Arrays.copyOfRange(nums, i + 1, nums.length);
+//            int index = Arrays.binarySearch(subnums, target - nums[i]);
+//            if (index >= 0) {
+//                result[0] = i;
+//                result[1] = index + i + 1;
+//                break;
+//            }
+//        }
+//
+//        int a = 0;
+//
+//        for (int i = 0; i < temp.length; i++) {
+//            if (temp[i] == nums[result[0]]) {
+//                a = i;
+//                break;
+//            }
+//            if (temp[i] == nums[result[1]]) {
+//                a = i;
+//                break;
+//            }
+//        }
+//
+//        for (int i = a + 1; i < temp.length; i++) {
+//            if (temp[i] == nums[result[1]] || temp[i] == nums[result[0]]) {
+//                result[1] = i;
+//                result[0] = a;
+//                break;
+//            }
+//        }
+//
+//        return result;
+//    }
+
     public int[] twoSum(int[] nums, int target) {
-        int[] result = new int[2];
-        int[] temp = Arrays.copyOfRange(nums, 0, nums.length);
-        Arrays.sort(nums);
-
-        for (int i = 0; i < nums.length - 1; i++) {
-            int[] subnums = Arrays.copyOfRange(nums, i + 1, nums.length);
-            int index = Arrays.binarySearch(subnums, target - nums[i]);
-            if (index >= 0) {
-                result[0] = i;
-                result[1] = index + i + 1;
-                break;
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            int complement = target - nums[i];
+            if (map.containsKey(complement)) {
+                return new int[]{map.get(complement), i};
             }
+            map.put(nums[i], i);
         }
-
-        int a = 0;
-
-        for (int i = 0; i < temp.length; i++) {
-            if (temp[i] == nums[result[0]]) {
-                a = i;
-                break;
-            }
-            if (temp[i] == nums[result[1]]) {
-                a = i;
-                break;
-            }
-        }
-
-        for (int i = a + 1; i < temp.length; i++) {
-            if (temp[i] == nums[result[1]] || temp[i] == nums[result[0]]) {
-                result[1] = i;
-                result[0] = a;
-                break;
-            }
-        }
-
-        return result;
+        throw new IllegalArgumentException("No two sum solution");
     }
 }
