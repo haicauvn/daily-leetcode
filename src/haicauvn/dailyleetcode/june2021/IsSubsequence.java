@@ -1,4 +1,4 @@
-package haicauvn.dailyleetcode;
+package haicauvn.dailyleetcode.june2021;
 
 /**
  * https://leetcode.com/problems/is-subsequence/
