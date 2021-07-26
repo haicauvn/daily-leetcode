@@ -4,7 +4,7 @@ package haicauvn.dailyleetcode.array;
  * 1295. Find Numbers with Even Number of Digits
  * tag: array
  */
-public class FindNumbers {
+public class _1295_Find_Numbers_Even_Number_of_Digits {
     public static void main(String[] args) {
         System.out.println(findNumbers(new int[]{12345}));
     }
