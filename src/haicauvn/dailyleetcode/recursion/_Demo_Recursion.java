@@ -34,12 +34,12 @@ public class _Demo_Recursion {
         System.out.println(arr[index]);
     }
     public static void main(String[] args) {
-        // System.out.println(factorial(1));
-        // System.out.println(factorial(2));
-        // System.out.println(factorial(3));
-        // System.out.println(factorial(4));
-        // System.out.println(factorial(5));
-        // System.out.println("fibo 10: " + fibo(10));
+        System.out.println(factorial(1));
+        System.out.println(factorial(2));
+        System.out.println(factorial(3));
+        System.out.println(factorial(4));
+        System.out.println(factorial(5));
+        System.out.println("fibo 10: " + fibo(10));
         printArray(new int[]{3,4,5,6,7,8,9}, 0);
         printArrayReverse(new int[]{3,4,5,6,7,8,9}, 0);
     }
