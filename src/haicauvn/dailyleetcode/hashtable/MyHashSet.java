@@ -6,6 +6,7 @@ public class MyHashSet {
     private final int size = 1000;
     private ArrayList<Integer>[] myBuckets;
 
+    @SuppressWarnings("unchecked")
     public MyHashSet() {
         myBuckets = new ArrayList[size];
         for (int i = 0; i < myBuckets.length; i++) {

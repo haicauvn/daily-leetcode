@@ -24,6 +24,7 @@ public class MyHashMap {
     private final int size = 1000;
     private ArrayList<Data>[] myBuckets;
 
+    @SuppressWarnings("unchecked")
     public MyHashMap() {
         myBuckets = new ArrayList[size];
         for (int i = 0; i < myBuckets.length; i++) {
