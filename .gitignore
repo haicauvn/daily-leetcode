@@ -115,4 +115,7 @@ modules.xml
 .history
 .ionide
 
+# Ignore file bin
+/bin
+
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode
